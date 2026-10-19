@@ -1,0 +1,792 @@
+{
+  "status": "ready",
+  "cleaning_report": {
+    "initial_rows": 3515,
+    "clean_rows": 3500,
+    "duplicates_removed": 15,
+    "missing_before": {
+      "Order_ID": 0,
+      "Customer_Age": 0,
+      "Customer_Gender": 52,
+      "Product_Category": 0,
+      "Product_Price": 0,
+      "Discount_Percentage": 0,
+      "Quantity": 0,
+      "Previous_Orders": 0,
+      "Previous_Returns": 0,
+      "Customer_Rating": 70,
+      "Delivery_Time": 42,
+      "Expected_Delivery_Time": 0,
+      "Payment_Method": 0,
+      "Shipping_Method": 0,
+      "Customer_Location": 0,
+      "Product_Rating": 0,
+      "Is_First_Order": 0,
+      "Return_Status": 0
+    },
+    "missing_after_dedup": {
+      "Order_ID": 0,
+      "Customer_Age": 0,
+      "Customer_Gender": 52,
+      "Product_Category": 0,
+      "Product_Price": 0,
+      "Discount_Percentage": 0,
+      "Quantity": 0,
+      "Previous_Orders": 0,
+      "Previous_Returns": 0,
+      "Customer_Rating": 70,
+      "Delivery_Time": 42,
+      "Expected_Delivery_Time": 0,
+      "Payment_Method": 0,
+      "Shipping_Method": 0,
+      "Customer_Location": 0,
+      "Product_Rating": 0,
+      "Is_First_Order": 0,
+      "Return_Status": 0
+    }
+  },
+  "dataset_split": {
+    "total_records": 3500,
+    "train_size": 2800,
+    "test_size": 700,
+    "test_split_ratio": 0.2,
+    "random_state": 42
+  },
+  "baseline_comparison": {
+    "model_name": "Dummy Classifier (Baseline)",
+    "accuracy": 0.6971,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "roc_auc": 0.5
+  },
+  "cross_validation": {
+    "num_folds": 5,
+    "mean_accuracy": 0.7186,
+    "std_accuracy": 0.0162,
+    "mean_precision": 0.5797,
+    "mean_recall": 0.2518,
+    "mean_f1": 0.3497,
+    "mean_roc_auc": 0.7021,
+    "fold_f1_scores": [
+      0.4064,
+      0.4016,
+      0.3158,
+      0.2857,
+      0.339
+    ],
+    "fold_roc_auc_scores": [
+      0.7196,
+      0.708,
+      0.7073,
+      0.6626,
+      0.7132
+    ]
+  },
+  "hyperparameter_tuning": {
+    "param_grid": {
+      "classifier__C": [
+        0.05,
+        0.1,
+        0.5,
+        1.0,
+        5.0
+      ],
+      "classifier__penalty": [
+        "l2"
+      ],
+      "classifier__solver": [
+        "lbfgs"
+      ]
+    },
+    "best_params": {
+      "classifier__C": 0.05,
+      "classifier__penalty": "l2",
+      "classifier__solver": "lbfgs"
+    },
+    "best_cv_score": 0.7045,
+    "tuning_metric": "roc_auc"
+  },
+  "test_metrics": {
+    "accuracy": 0.7029,
+    "precision": 0.5263,
+    "recall": 0.1887,
+    "f1": 0.2778,
+    "roc_auc": 0.6677
+  },
+  "confusion_matrix": {
+    "tn": 452,
+    "fp": 36,
+    "fn": 172,
+    "tp": 40
+  },
+  "roc_curve": [
+    {
+      "fpr": 0.0,
+      "tpr": 0.0
+    },
+    {
+      "fpr": 0.0123,
+      "tpr": 0.0283
+    },
+    {
+      "fpr": 0.0348,
+      "tpr": 0.1038
+    },
+    {
+      "fpr": 0.0512,
+      "tpr": 0.1274
+    },
+    {
+      "fpr": 0.0594,
+      "tpr": 0.1651
+    },
+    {
+      "fpr": 0.082,
+      "tpr": 0.1934
+    },
+    {
+      "fpr": 0.1045,
+      "tpr": 0.2406
+    },
+    {
+      "fpr": 0.123,
+      "tpr": 0.2689
+    },
+    {
+      "fpr": 0.1434,
+      "tpr": 0.3019
+    },
+    {
+      "fpr": 0.166,
+      "tpr": 0.3349
+    },
+    {
+      "fpr": 0.1742,
+      "tpr": 0.3774
+    },
+    {
+      "fpr": 0.2029,
+      "tpr": 0.4009
+    },
+    {
+      "fpr": 0.2254,
+      "tpr": 0.4245
+    },
+    {
+      "fpr": 0.2377,
+      "tpr": 0.4623
+    },
+    {
+      "fpr": 0.2541,
+      "tpr": 0.4858
+    },
+    {
+      "fpr": 0.2746,
+      "tpr": 0.5047
+    },
+    {
+      "fpr": 0.2971,
+      "tpr": 0.5566
+    },
+    {
+      "fpr": 0.3176,
+      "tpr": 0.5802
+    },
+    {
+      "fpr": 0.3648,
+      "tpr": 0.6085
+    },
+    {
+      "fpr": 0.3791,
+      "tpr": 0.6368
+    },
+    {
+      "fpr": 0.3975,
+      "tpr": 0.6604
+    },
+    {
+      "fpr": 0.4406,
+      "tpr": 0.684
+    },
+    {
+      "fpr": 0.4816,
+      "tpr": 0.717
+    },
+    {
+      "fpr": 0.5246,
+      "tpr": 0.75
+    },
+    {
+      "fpr": 0.5492,
+      "tpr": 0.7877
+    },
+    {
+      "fpr": 0.6168,
+      "tpr": 0.8113
+    },
+    {
+      "fpr": 0.627,
+      "tpr": 0.8443
+    },
+    {
+      "fpr": 0.707,
+      "tpr": 0.8774
+    },
+    {
+      "fpr": 0.7561,
+      "tpr": 0.9009
+    },
+    {
+      "fpr": 0.7971,
+      "tpr": 0.9245
+    },
+    {
+      "fpr": 0.8299,
+      "tpr": 0.9481
+    },
+    {
+      "fpr": 0.8934,
+      "tpr": 0.967
+    },
+    {
+      "fpr": 0.9365,
+      "tpr": 0.9906
+    },
+    {
+      "fpr": 1.0,
+      "tpr": 1.0
+    }
+  ],
+  "pr_curve": [
+    {
+      "recall": 1.0,
+      "precision": 0.3029
+    },
+    {
+      "recall": 0.9953,
+      "precision": 0.3117
+    },
+    {
+      "recall": 0.9764,
+      "precision": 0.3165
+    },
+    {
+      "recall": 0.9623,
+      "precision": 0.3233
+    },
+    {
+      "recall": 0.9481,
+      "precision": 0.3306
+    },
+    {
+      "recall": 0.9245,
+      "precision": 0.335
+    },
+    {
+      "recall": 0.9057,
+      "precision": 0.3416
+    },
+    {
+      "recall": 0.8821,
+      "precision": 0.3469
+    },
+    {
+      "recall": 0.8632,
+      "precision": 0.3547
+    },
+    {
+      "recall": 0.8491,
+      "precision": 0.3651
+    },
+    {
+      "recall": 0.8066,
+      "precision": 0.3638
+    },
+    {
+      "recall": 0.7925,
+      "precision": 0.3758
+    },
+    {
+      "recall": 0.7642,
+      "precision": 0.3821
+    },
+    {
+      "recall": 0.7264,
+      "precision": 0.384
+    },
+    {
+      "recall": 0.6981,
+      "precision": 0.3915
+    },
+    {
+      "recall": 0.6792,
+      "precision": 0.4056
+    },
+    {
+      "recall": 0.6557,
+      "precision": 0.4187
+    },
+    {
+      "recall": 0.6132,
+      "precision": 0.4207
+    },
+    {
+      "recall": 0.5943,
+      "precision": 0.4406
+    },
+    {
+      "recall": 0.5566,
+      "precision": 0.4487
+    },
+    {
+      "recall": 0.5047,
+      "precision": 0.4458
+    },
+    {
+      "recall": 0.4717,
+      "precision": 0.4608
+    },
+    {
+      "recall": 0.4151,
+      "precision": 0.4536
+    },
+    {
+      "recall": 0.3821,
+      "precision": 0.4737
+    },
+    {
+      "recall": 0.3208,
+      "precision": 0.4595
+    },
+    {
+      "recall": 0.2877,
+      "precision": 0.488
+    },
+    {
+      "recall": 0.2406,
+      "precision": 0.5
+    },
+    {
+      "recall": 0.1934,
+      "precision": 0.519
+    },
+    {
+      "recall": 0.1415,
+      "precision": 0.5357
+    },
+    {
+      "recall": 0.0849,
+      "precision": 0.5455
+    },
+    {
+      "recall": 0.0283,
+      "precision": 0.6
+    }
+  ],
+  "intercept": -0.9484,
+  "top_features": [
+    {
+      "feature": "Product_Category_Apparel",
+      "raw_feature": "Product_Category_Apparel",
+      "coefficient": 0.5525,
+      "odds_ratio": 1.7377,
+      "abs_impact": 0.5525,
+      "direction": "Increases Return Risk"
+    },
+    {
+      "feature": "Product_Category_Books",
+      "raw_feature": "Product_Category_Books",
+      "coefficient": -0.4542,
+      "odds_ratio": 0.635,
+      "abs_impact": 0.4542,
+      "direction": "Decreases Return Risk"
+    },
+    {
+      "feature": "Previous_Return_Rate",
+      "raw_feature": "Previous_Return_Rate",
+      "coefficient": 0.4175,
+      "odds_ratio": 1.5182,
+      "abs_impact": 0.4175,
+      "direction": "Increases Return Risk"
+    },
+    {
+      "feature": "Product_Category_Footwear",
+      "raw_feature": "Product_Category_Footwear",
+      "coefficient": 0.3907,
+      "odds_ratio": 1.478,
+      "abs_impact": 0.3907,
+      "direction": "Increases Return Risk"
+    },
+    {
+      "feature": "Product_Category_Beauty & Personal Care",
+      "raw_feature": "Product_Category_Beauty & Personal Care",
+      "coefficient": -0.3807,
+      "odds_ratio": 0.6834,
+      "abs_impact": 0.3807,
+      "direction": "Decreases Return Risk"
+    },
+    {
+      "feature": "Product_Rating",
+      "raw_feature": "Product_Rating",
+      "coefficient": -0.3295,
+      "odds_ratio": 0.7193,
+      "abs_impact": 0.3295,
+      "direction": "Decreases Return Risk"
+    },
+    {
+      "feature": "Payment_Method_Cash on Delivery",
+      "raw_feature": "Payment_Method_Cash on Delivery",
+      "coefficient": 0.2559,
+      "odds_ratio": 1.2916,
+      "abs_impact": 0.2559,
+      "direction": "Increases Return Risk"
+    },
+    {
+      "feature": "Delivery_Delay",
+      "raw_feature": "Delivery_Delay",
+      "coefficient": 0.2251,
+      "odds_ratio": 1.2525,
+      "abs_impact": 0.2251,
+      "direction": "Increases Return Risk"
+    },
+    {
+      "feature": "Product_Category_Electronics",
+      "raw_feature": "Product_Category_Electronics",
+      "coefficient": -0.2195,
+      "odds_ratio": 0.8029,
+      "abs_impact": 0.2195,
+      "direction": "Decreases Return Risk"
+    },
+    {
+      "feature": "Shipping_Method_Express",
+      "raw_feature": "Shipping_Method_Express",
+      "coefficient": 0.2128,
+      "odds_ratio": 1.2371,
+      "abs_impact": 0.2128,
+      "direction": "Increases Return Risk"
+    },
+    {
+      "feature": "Payment_Method_UPI",
+      "raw_feature": "Payment_Method_UPI",
+      "coefficient": -0.2059,
+      "odds_ratio": 0.8139,
+      "abs_impact": 0.2059,
+      "direction": "Decreases Return Risk"
+    },
+    {
+      "feature": "Shipping_Method_Economy",
+      "raw_feature": "Shipping_Method_Economy",
+      "coefficient": -0.1659,
+      "odds_ratio": 0.8472,
+      "abs_impact": 0.1659,
+      "direction": "Decreases Return Risk"
+    }
+  ],
+  "all_features": [
+    {
+      "feature": "Product_Category_Apparel",
+      "raw_feature": "Product_Category_Apparel",
+      "coefficient": 0.5525,
+      "odds_ratio": 1.7377,
+      "abs_impact": 0.5525,
+      "direction": "Increases Return Risk"
+    },
+    {
+      "feature": "Product_Category_Books",
+      "raw_feature": "Product_Category_Books",
+      "coefficient": -0.4542,
+      "odds_ratio": 0.635,
+      "abs_impact": 0.4542,
+      "direction": "Decreases Return Risk"
+    },
+    {
+      "feature": "Previous_Return_Rate",
+      "raw_feature": "Previous_Return_Rate",
+      "coefficient": 0.4175,
+      "odds_ratio": 1.5182,
+      "abs_impact": 0.4175,
+      "direction": "Increases Return Risk"
+    },
+    {
+      "feature": "Product_Category_Footwear",
+      "raw_feature": "Product_Category_Footwear",
+      "coefficient": 0.3907,
+      "odds_ratio": 1.478,
+      "abs_impact": 0.3907,
+      "direction": "Increases Return Risk"
+    },
+    {
+      "feature": "Product_Category_Beauty & Personal Care",
+      "raw_feature": "Product_Category_Beauty & Personal Care",
+      "coefficient": -0.3807,
+      "odds_ratio": 0.6834,
+      "abs_impact": 0.3807,
+      "direction": "Decreases Return Risk"
+    },
+    {
+      "feature": "Product_Rating",
+      "raw_feature": "Product_Rating",
+      "coefficient": -0.3295,
+      "odds_ratio": 0.7193,
+      "abs_impact": 0.3295,
+      "direction": "Decreases Return Risk"
+    },
+    {
+      "feature": "Payment_Method_Cash on Delivery",
+      "raw_feature": "Payment_Method_Cash on Delivery",
+      "coefficient": 0.2559,
+      "odds_ratio": 1.2916,
+      "abs_impact": 0.2559,
+      "direction": "Increases Return Risk"
+    },
+    {
+      "feature": "Delivery_Delay",
+      "raw_feature": "Delivery_Delay",
+      "coefficient": 0.2251,
+      "odds_ratio": 1.2525,
+      "abs_impact": 0.2251,
+      "direction": "Increases Return Risk"
+    },
+    {
+      "feature": "Product_Category_Electronics",
+      "raw_feature": "Product_Category_Electronics",
+      "coefficient": -0.2195,
+      "odds_ratio": 0.8029,
+      "abs_impact": 0.2195,
+      "direction": "Decreases Return Risk"
+    },
+    {
+      "feature": "Shipping_Method_Express",
+      "raw_feature": "Shipping_Method_Express",
+      "coefficient": 0.2128,
+      "odds_ratio": 1.2371,
+      "abs_impact": 0.2128,
+      "direction": "Increases Return Risk"
+    },
+    {
+      "feature": "Payment_Method_UPI",
+      "raw_feature": "Payment_Method_UPI",
+      "coefficient": -0.2059,
+      "odds_ratio": 0.8139,
+      "abs_impact": 0.2059,
+      "direction": "Decreases Return Risk"
+    },
+    {
+      "feature": "Shipping_Method_Economy",
+      "raw_feature": "Shipping_Method_Economy",
+      "coefficient": -0.1659,
+      "odds_ratio": 0.8472,
+      "abs_impact": 0.1659,
+      "direction": "Decreases Return Risk"
+    },
+    {
+      "feature": "Delivery_Time",
+      "raw_feature": "Delivery_Time",
+      "coefficient": 0.1625,
+      "odds_ratio": 1.1765,
+      "abs_impact": 0.1625,
+      "direction": "Increases Return Risk"
+    },
+    {
+      "feature": "Payment_Method_Credit Card",
+      "raw_feature": "Payment_Method_Credit Card",
+      "coefficient": -0.1535,
+      "odds_ratio": 0.8577,
+      "abs_impact": 0.1535,
+      "direction": "Decreases Return Risk"
+    },
+    {
+      "feature": "Customer_Rating",
+      "raw_feature": "Customer_Rating",
+      "coefficient": -0.1394,
+      "odds_ratio": 0.8699,
+      "abs_impact": 0.1394,
+      "direction": "Decreases Return Risk"
+    },
+    {
+      "feature": "Customer_Gender_Other",
+      "raw_feature": "Customer_Gender_Other",
+      "coefficient": 0.1341,
+      "odds_ratio": 1.1435,
+      "abs_impact": 0.1341,
+      "direction": "Increases Return Risk"
+    },
+    {
+      "feature": "Discount_Percentage",
+      "raw_feature": "Discount_Percentage",
+      "coefficient": 0.1187,
+      "odds_ratio": 1.126,
+      "abs_impact": 0.1187,
+      "direction": "Increases Return Risk"
+    },
+    {
+      "feature": "Product_Category_Home & Kitchen",
+      "raw_feature": "Product_Category_Home & Kitchen",
+      "coefficient": 0.1119,
+      "odds_ratio": 1.1184,
+      "abs_impact": 0.1119,
+      "direction": "Increases Return Risk"
+    },
+    {
+      "feature": "Payment_Method_Debit Card",
+      "raw_feature": "Payment_Method_Debit Card",
+      "coefficient": 0.1042,
+      "odds_ratio": 1.1098,
+      "abs_impact": 0.1042,
+      "direction": "Increases Return Risk"
+    },
+    {
+      "feature": "Customer_Gender_Female",
+      "raw_feature": "Customer_Gender_Female",
+      "coefficient": -0.0822,
+      "odds_ratio": 0.9211,
+      "abs_impact": 0.0822,
+      "direction": "Decreases Return Risk"
+    },
+    {
+      "feature": "Customer_Location_East",
+      "raw_feature": "Customer_Location_East",
+      "coefficient": 0.0764,
+      "odds_ratio": 1.0794,
+      "abs_impact": 0.0764,
+      "direction": "Increases Return Risk"
+    },
+    {
+      "feature": "Customer_Location_Central",
+      "raw_feature": "Customer_Location_Central",
+      "coefficient": -0.0752,
+      "odds_ratio": 0.9276,
+      "abs_impact": 0.0752,
+      "direction": "Decreases Return Risk"
+    },
+    {
+      "feature": "Shipping_Method_Standard",
+      "raw_feature": "Shipping_Method_Standard",
+      "coefficient": -0.0718,
+      "odds_ratio": 0.9307,
+      "abs_impact": 0.0718,
+      "direction": "Decreases Return Risk"
+    },
+    {
+      "feature": "Quantity",
+      "raw_feature": "Quantity",
+      "coefficient": -0.0666,
+      "odds_ratio": 0.9355,
+      "abs_impact": 0.0666,
+      "direction": "Decreases Return Risk"
+    },
+    {
+      "feature": "Customer_Location_West",
+      "raw_feature": "Customer_Location_West",
+      "coefficient": -0.0561,
+      "odds_ratio": 0.9455,
+      "abs_impact": 0.0561,
+      "direction": "Decreases Return Risk"
+    },
+    {
+      "feature": "Customer_Gender_Male",
+      "raw_feature": "Customer_Gender_Male",
+      "coefficient": -0.0513,
+      "odds_ratio": 0.95,
+      "abs_impact": 0.0513,
+      "direction": "Decreases Return Risk"
+    },
+    {
+      "feature": "Effective_Price",
+      "raw_feature": "Effective_Price",
+      "coefficient": 0.0493,
+      "odds_ratio": 1.0506,
+      "abs_impact": 0.0493,
+      "direction": "Increases Return Risk"
+    },
+    {
+      "feature": "Is_First_Order_Yes",
+      "raw_feature": "Is_First_Order_Yes",
+      "coefficient": 0.0444,
+      "odds_ratio": 1.0454,
+      "abs_impact": 0.0444,
+      "direction": "Increases Return Risk"
+    },
+    {
+      "feature": "Is_First_Order_No",
+      "raw_feature": "Is_First_Order_No",
+      "coefficient": -0.0438,
+      "odds_ratio": 0.9572,
+      "abs_impact": 0.0438,
+      "direction": "Decreases Return Risk"
+    },
+    {
+      "feature": "Expected_Delivery_Time",
+      "raw_feature": "Expected_Delivery_Time",
+      "coefficient": 0.0416,
+      "odds_ratio": 1.0424,
+      "abs_impact": 0.0416,
+      "direction": "Increases Return Risk"
+    },
+    {
+      "feature": "Customer_Age",
+      "raw_feature": "Customer_Age",
+      "coefficient": 0.0404,
+      "odds_ratio": 1.0412,
+      "abs_impact": 0.0404,
+      "direction": "Increases Return Risk"
+    },
+    {
+      "feature": "Customer_Location_South",
+      "raw_feature": "Customer_Location_South",
+      "coefficient": 0.0334,
+      "odds_ratio": 1.0339,
+      "abs_impact": 0.0334,
+      "direction": "Increases Return Risk"
+    },
+    {
+      "feature": "Total_Order_Value",
+      "raw_feature": "Total_Order_Value",
+      "coefficient": -0.0289,
+      "odds_ratio": 0.9715,
+      "abs_impact": 0.0289,
+      "direction": "Decreases Return Risk"
+    },
+    {
+      "feature": "Shipping_Method_Same Day",
+      "raw_feature": "Shipping_Method_Same Day",
+      "coefficient": 0.0256,
+      "odds_ratio": 1.0259,
+      "abs_impact": 0.0256,
+      "direction": "Increases Return Risk"
+    },
+    {
+      "feature": "Customer_Location_North",
+      "raw_feature": "Customer_Location_North",
+      "coefficient": 0.0222,
+      "odds_ratio": 1.0224,
+      "abs_impact": 0.0222,
+      "direction": "Increases Return Risk"
+    },
+    {
+      "feature": "Previous_Returns",
+      "raw_feature": "Previous_Returns",
+      "coefficient": -0.0207,
+      "odds_ratio": 0.9795,
+      "abs_impact": 0.0207,
+      "direction": "Decreases Return Risk"
+    },
+    {
+      "feature": "Previous_Orders",
+      "raw_feature": "Previous_Orders",
+      "coefficient": -0.0113,
+      "odds_ratio": 0.9888,
+      "abs_impact": 0.0113,
+      "direction": "Decreases Return Risk"
+    },
+    {
+      "feature": "Product_Price",
+      "raw_feature": "Product_Price",
+      "coefficient": 0.0093,
+      "odds_ratio": 1.0093,
+      "abs_impact": 0.0093,
+      "direction": "Increases Return Risk"
+    }
+  ]
+}
