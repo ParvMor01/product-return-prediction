@@ -10,8 +10,9 @@ import pandas as pd
 import numpy as np
 from typing import Dict, Any, List
 
-DATA_PATH = "backend/data/product_returns.csv"
-METADATA_PATH = "backend/models/model_metadata.json"
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "../.."))
+DATA_PATH = os.path.join(BASE_DIR, "data", "product_returns.csv")
+METADATA_PATH = os.path.join(BASE_DIR, "models", "model_metadata.json")
 
 class AnalyticsService:
     def __init__(self, data_path: str = DATA_PATH, metadata_path: str = METADATA_PATH):

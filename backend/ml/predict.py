@@ -10,7 +10,8 @@ import numpy as np
 import pandas as pd
 from typing import Dict, Any, List
 
-PIPELINE_PATH = "backend/models/return_prediction_pipeline.joblib"
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+PIPELINE_PATH = os.path.join(BASE_DIR, "models", "return_prediction_pipeline.joblib")
 
 class ReturnPredictor:
     def __init__(self, pipeline_path: str = PIPELINE_PATH):
